@@ -27,3 +27,6 @@ print('Adsorption energy:', e_slab + e_N2 - slab.get_potential_energy())
 
 view(slab)
 
+print("Hello, this line is new.")
+print("5 x 5 =", 5*5)
+

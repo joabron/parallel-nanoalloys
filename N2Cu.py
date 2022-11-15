@@ -29,4 +29,4 @@ view(slab)
 
 print("Hello, this line is new.")
 print("5 x 5 =", 5*5)
-
+print("6 x 6 =", 6*6)

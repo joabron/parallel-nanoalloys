@@ -3,6 +3,7 @@ from ase.calculators.emt import EMT
 from ase.constraints import FixAtoms
 from ase.optimize import QuasiNewton
 from ase.build import fcc111, add_adsorbate
+from ase.visualize import view
 
 h = 1.85
 d = 1.10
@@ -23,3 +24,6 @@ dyn = QuasiNewton(slab, trajectory='N2Cu.traj')
 dyn.run(fmax=0.05)
 
 print('Adsorption energy:', e_slab + e_N2 - slab.get_potential_energy())
+
+view(slab)
+

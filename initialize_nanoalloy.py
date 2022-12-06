@@ -11,7 +11,6 @@ This script contains functions for initializing nanoalloys in different ways.
 
 '''
 #Make a function to do num_A = ... and num_B = ... in rectangle
-#Make a function to build core-shell without hardcode
 #Make a function to build layered box
 #Make a function to build sub-clustered
 #Check if metals are fcc or bcc
@@ -35,13 +34,17 @@ def build_random_box(atom_A, atom_B, ratio, x, y, z):
         if cluster[index].symbol != atom_B:
             cluster[index].symbol = atom_B
             i += 1
-    return cluster
+    num_A = num_atoms - swap_atoms
+    num_B = swap_atoms
+    return cluster, num_A, num_B
 
 def build_random_sphere(atom_A, atom_B, ratio, size):
     symbols = atom_A
     surfaces = [(1, 1, 1), (1, 1, 0), (1, 0, 0)]
     layers = [size-1, size, size-1]
     cluster = FaceCenteredCubic(atom_A, surfaces, layers)
+
+    #swap atom_A for atom_B at random
     num_atoms = len(cluster)
     swap_atoms = int(ratio * num_atoms)
     i = 0
@@ -50,13 +53,6 @@ def build_random_sphere(atom_A, atom_B, ratio, size):
         if cluster[index].symbol != atom_B:
             cluster[index].symbol = atom_B
             i += 1
-    return cluster
-
-#A hardcoded function for a core of 2 layers and a shell of 1 layer
-def build_core2shell1(atom_A, atom_B):
-    surfaces = [(1, 1, 1), (1, 1, 0), (1, 0, 0)]
-    layers = [3, 3, 3]
-    cluster = FaceCenteredCubic(atom_A, surfaces, layers)
-    for i in [5, 8, 12, 13, 17, 21, 23, 26, 27, 29, 30, 31, 32]:
-        cluster[i].symbol = atom_B
-    return cluster
+    num_A = num_atoms - swap_atoms
+    num_B = swap_atoms
+    return cluster, num_A, num_B

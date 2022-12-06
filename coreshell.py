@@ -1,5 +1,7 @@
 """ This module contains the function
   to generate core-shell A@B nanoparticle with FCC structure.
+
+  The module was found at https://github.com/lavakyan/ase-bimetall
 """
 from __future__ import print_function
 import random

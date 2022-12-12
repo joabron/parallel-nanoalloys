@@ -4,6 +4,7 @@
 from ase.cluster.cubic import FaceCenteredCubic
 from ase.cluster.cubic import BodyCenteredCubic
 from ase.visualize import view
+import coreshell as cs
 import random as rd
 
 '''
@@ -39,7 +40,6 @@ def build_random_box(atom_A, atom_B, ratio, x, y, z):
     return cluster, num_A, num_B
 
 def build_random_sphere(atom_A, atom_B, ratio, size):
-    symbols = atom_A
     surfaces = [(1, 1, 1), (1, 1, 0), (1, 0, 0)]
     layers = [size-1, size, size-1]
     cluster = FaceCenteredCubic(atom_A, surfaces, layers)
@@ -56,3 +56,13 @@ def build_random_sphere(atom_A, atom_B, ratio, size):
     num_A = num_atoms - swap_atoms
     num_B = swap_atoms
     return cluster, num_A, num_B
+
+def build_coreshell(atom_A, atom_B, ratio, size, lc, n=-1):
+    surfaces = [(1, 1, 1), (1, 1, 0), (1, 0, 0)]
+    layers = [size-1, size, size-1]
+    cluster = FaceCenteredCubic(atom_A, surfaces, layers)
+    cluster = cs.CoreShellFCC(cluster, atom_B, atom_A, ratio, lc, n_depth=n)
+    return cluster
+
+atoms = build_coreshell('Al', 'Pt', 0.6, 4, 4.09, n=1)
+view(atoms)

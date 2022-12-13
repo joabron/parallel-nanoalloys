@@ -63,6 +63,3 @@ def build_coreshell(atom_A, atom_B, ratio, size, lc, n=-1):
     cluster = FaceCenteredCubic(atom_A, surfaces, layers)
     cluster = cs.CoreShellFCC(cluster, atom_B, atom_A, ratio, lc, n_depth=n)
     return cluster
-
-atoms = build_coreshell('Al', 'Pt', 0.6, 4, 4.09, n=1)
-view(atoms)

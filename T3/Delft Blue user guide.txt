@@ -1,6 +1,18 @@
 # login to DelftBlue, replace <netid> with your nedid
 ssh -J <netid>@student-linux.tudelft.nl <netid>@login.delftblue.tudelft.nl
 
+# to transfer file from your local machine to DelftBlue
+user@laptop:~$ scp -p mylocalfile <netid>@login.delftblue.tudelft.nl:~/destination_folder_on_DelftBlue/
+
+# to transfer a folder (recursively) from your local machine to DelftBlue
+user@laptop:~$ scp -pr mylocalfolder <netid>@login.delftblue.tudelft.nl:~/destination_folder_on_DelftBlue/
+
+# to transfer file from DelftBlue to your local machine
+user@laptop:~$ scp -p <netid>@login.delftblue.tudelft.nl:~/origin_folder_on_DelftBlue/remotefile ./
+
+# to transfer a folder (recursively) from DelftBlue to your local machine
+user@laptop:~$ scp -pr <netid>@login.delftblue.tudelft.nl:~/origin_folder_on_DelftBlue/remotefolder ./
+
 # need to first export paths for header files, so that you can download necessary libraries
 export CPATH=/apps/arch/2022r2/software/linux-rhel8-skylake_avx512/gcc-8.5.0/openmpi-4.1.1-fezcq73heq4rzzsbcumuq5xx4v5asv45/include:$CPATH
 export CPATH=/apps/arch/2022r2/software/linux-rhel8-skylake_avx512/gcc-8.5.0/mpfr-4.1.0-ok2rrvi5iz3oeokaopoa4ntoqj4aja2t/include:$CPATH

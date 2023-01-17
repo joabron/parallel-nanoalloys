@@ -1,0 +1,3 @@
+ssh -J <netid>@student-linux.tudelft.nl <netid>@login.delftblue.tudelft.nl
+
+sbatch script_test_multiple.sh

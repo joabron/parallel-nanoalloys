@@ -1,23 +1,8 @@
 ## parallel-nanoalloys
-Parallel molecular dynamics simulation algorithm for studying thermal stability of nanoalloys. A repository for all the code used in the TW3725TU Final Project of the Computational Science and Engineering (CSE) Minor. This code implements a combination of various sub-components for the investigation of the thermal stability of nanoalloys. The code consists of the nanoalloy initialization, followed by molecular dynamics runs in a Replica Exchange (RE) framework, followed by the Weigthed Histogram Analysis Method, a statistical analysis tool for generating the graph of heat capcity vs temperature from the temperature and potential energy data output from RE.
+Parallel molecular dynamics simulation algorithm for studying the thermal stability of nanoalloys. A repository for all the code used in the TW3725TU Final Project of the Computational Science and Engineering (CSE) Minor. This code implements a combination of various sub-components for the investigation of the thermal stability of nanoalloys: a nanoalloy initialization, followed by molecular dynamics (MD) runs in a Replica Exchange (RE) framework, followed by the Weigthed Histogram Analysis Method (WHAM), a statistical analysis tool for generating the graph of heat capcity vs temperature, from the temperature and potential energy data output of RE.
 
 ## Abstract
-Bimetallic nanoalloys are nano-scale clusters of atoms
-that can greatly vary in composition and shape. They
-have shown promising results in catalysis, biomedical
-and optical applications. Exploration of their thermody-
-namic stability through physical experiments is both dif-
-ficult and expensive, thus justifying the need for molec-
-ular dynamics (MD) simulations to quicken the pro-
-cess of finding the most stable structures with specified
-properties of interest. In this report, a novel stream-
-lined Replica Exchange and Weighted Histogram Analy-
-sis Method software was developed as a tool for studying
-thermal stability of custom configurations and compo-
-sitions of bimetallic nanoalloys. The software is paral-
-lelized and tested on the DelftBlue supercomputer, for
-which the run-times were analyzed and demonstrate a
-sub-linear speedup.
+Bimetallic nanoalloys are nano-scale clusters of atoms that can greatly vary in composition and shape. They have shown promising results in catalysis, biomedical and optical applications. Exploration of their thermodynamic stability through physical experiments is both difficult and expensive, thus justifying the need for molecular dynamics (MD) simulations to quicken the process of finding the most stable structures with specified properties of interest. A novel streamlined Replica Exchange and Weighted Histogram Analysis Method software is developed as a tool for studying thermal stability of custom configurations and compositions of bimetallic nanoalloys. The software is parallelized and tested on the DelftBlue supercomputer, for which the run-times are analyzed and demonstrate a sub-linear speedup.
 
 **Keywords**: molecular dynamics simulation, nanoal-
 loys, thermal stability, inter-atomic potentials, Python

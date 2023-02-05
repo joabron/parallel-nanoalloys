@@ -1,7 +1,7 @@
 ## parallel-nanoalloys
 Parallel molecular dynamics simulation algorithm for studying thermal stability of nanoalloys. A repository for all the code used in the TW3725TU Final Project of the Computational Science and Engineering (CSE) Minor. This code implements a combination of various sub-components for the investigation of the thermal stability of nanoalloys. The code consists of the nanoalloy initialization, followed by molecular dynamics runs in a Replica Exchange (RE) framework, followed by the Weigthed Histogram Analysis Method, a statistical analysis tool for generating the graph of heat capcity vs temperature from the temperature and potential energy data output from RE.
 
-##Abstract
+## Abstract
 Bimetallic nanoalloys are nano-scale clusters of atoms
 that can greatly vary in composition and shape. They
 have shown promising results in catalysis, biomedical
@@ -19,7 +19,7 @@ lelized and tested on the DelftBlue supercomputer, for
 which the run-times were analyzed and demonstrate a
 sub-linear speedup.
 
-Keywords: molecular dynamics simulation, nanoal-
+**Keywords**: molecular dynamics simulation, nanoal-
 loys, thermal stability, inter-atomic potentials, Python
 programming, MPI-parallelization, high-performance
 computing

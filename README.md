@@ -37,6 +37,8 @@ Please make sure to update tests as appropriate.
 
 ## Authors and acknowledgment
 
+The following authors all contributed equally to the project: Adam Axelsen, Adrian Beňo, Joachim Bron, Philip Vos
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

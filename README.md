@@ -5,10 +5,6 @@ Parallel algorithms for studying the thermal stability of nanoalloys. A reposito
 
 Run replica reads the input file and calls the replica exchange script
 
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
-
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.

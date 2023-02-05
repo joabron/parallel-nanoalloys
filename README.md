@@ -39,6 +39,8 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+## Authors and acknowledgment
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

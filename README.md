@@ -49,4 +49,4 @@ We would like to thank Dr. Dennis Plagin for his help and guidance during the pr
 
 ## License
 
-[MIT](.\LICENSE.md)
+[MIT](./LICENSE.md)

@@ -1,0 +1,36 @@
+Pick your structure initialization
+0 - Core-shell
+1 - Pure sphere
+2 - Nanoalloy with specified number of atoms # name could be better
+INPUT STRUCTURE INITIALIZATION: 0
+
+0 CORE-SHELL:
+Atom A: Ni
+Atom-B: Al
+ratio A to B: 0.5
+Number of layers: 2
+Lattice constant: 4.09
+
+1 PURE-SPHERE:
+Atom: Ni
+Size: 3
+
+2 NANOALLOY WITH SPECIFIED NUMBER OF ATOMS
+Atom A: Ni
+Atom-B: Al
+Number of atom A: 4
+Number of atom B: 8
+
+WHAM PARAMETERS
+Convergence epsilon: 1e-3
+Convergence maximum iterations: 100
+Temperature start: 100 
+Temperature end: 1500
+Number of data points: 100
+
+RE PARAMETERS
+Number of replicas: 20
+Starting Temperature: 100
+End Temperature: 1500
+Number of swap phases: 10
+Number of MD runs: 1000
